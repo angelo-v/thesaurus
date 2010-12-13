@@ -68,7 +68,7 @@ public class OpenThesaurusRdfDocument {
 
 	public TermRdfResource createTermRdfResource(String literalForm) {
 		Resource termResource = model.createResource(buildTermUri(literalForm), SKOS_XL.Label);
-		termResource.addProperty(SKOS_XL.literalForm, literalForm);
+		termResource.addProperty(SKOS_XL.literalForm, literalForm, "de");
 		return new TermRdfResource(termResource);
 	}
 	
